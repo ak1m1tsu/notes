@@ -343,8 +343,8 @@ shuffle() ^n2KGFX33
 		},
 		{
 			"type": "arrow",
-			"version": 245,
-			"versionNonce": 1082262073,
+			"version": 247,
+			"versionNonce": 541842674,
 			"isDeleted": false,
 			"id": "HkwA-mvA7wDC7sfSBR1J7",
 			"fillStyle": "hachure",
@@ -363,7 +363,7 @@ shuffle() ^n2KGFX33
 			"groupIds": [],
 			"strokeSharpness": "round",
 			"boundElements": [],
-			"updated": 1666610517972,
+			"updated": 1667011458188,
 			"link": null,
 			"locked": false,
 			"startBinding": {
@@ -427,8 +427,8 @@ shuffle() ^n2KGFX33
 		}
 	],
 	"appState": {
-		"theme": "light",
-		"viewBackgroundColor": "#ffffff",
+		"theme": "dark",
+		"viewBackgroundColor": "transparent",
 		"currentItemStrokeColor": "#000000",
 		"currentItemBackgroundColor": "transparent",
 		"currentItemFillStyle": "hachure",

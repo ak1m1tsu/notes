@@ -1,4 +1,6 @@
-# Array и Slice
+# Slices and For Loops
+
+## Slice and Array
 
 Для того чтобы хранить данные одного и того же типа в **Go** используют `Array` и `Slice`.
 
@@ -26,7 +28,7 @@ nums := []int{1, 2, 3, 4, 5}
 fmt.Println(nums[2:3]) // Prints: [3 4]
 ```
 
-# For
+## For Loop
 
 Для того чтобы пройтись по массивам используют цикл `for`
 

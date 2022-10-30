@@ -1,4 +1,6 @@
-# Оператор `if`
+# Conditionals
+
+## Оператор `if`
 
 ```go
 alarmRinging := true
@@ -7,7 +9,7 @@ if alarmRinging {
 }
 ```
 
-# Оператор `if else`
+## Оператор `if else`
 
 ```go
 isHungry := false
@@ -18,7 +20,7 @@ if isHungry {
 }
 ```
 
-# Операторы сравнения
+## Операторы сравнения
 
 ```go
 lockCombo := "2-35-19"
@@ -37,7 +39,7 @@ if vaultAmt >= 200000 {
 }
 ```
 
-# Логические операторы
+## Логические операторы
 
 ```go
 // Logical AND
@@ -60,7 +62,7 @@ if !readyToGo {
 }
 ```
 
-# Оператор `else if`
+## Оператор `else if`
 
 ```go
 position := 2
@@ -76,7 +78,7 @@ if position == 1 {
 }
 ```
 
-# Конструкция `Switch`
+## Конструкция `Switch`
 
 ```go
 clothingChoice := "sweater"
@@ -91,7 +93,7 @@ default:
 }
 ```
 
-# Scoped Short Declaration Statement
+## Scoped Short Declaration Statement
 
 ```go
 x := 8
@@ -133,7 +135,7 @@ default:
 }
 ```
 
-# Randomizing
+## Randomizing
 
 Для получения случайных значений используют пакет `math/rand`
 
