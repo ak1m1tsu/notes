@@ -1,0 +1,27 @@
+{
+	"nodes":[
+		{"id":"98aaed04fdf2e687","x":-125,"y":119,"width":250,"height":60,"type":"text","text":"What I need to do?"},
+		{"id":"9d1a48ad33aa0fca","x":-572,"y":119,"width":250,"height":60,"type":"text","text":"Define API requirements"},
+		{"id":"78801173a91eb3a5","x":274,"y":119,"width":250,"height":60,"type":"text","text":"Use Redis for caching"},
+		{"id":"f0093887078eed9d","x":-572,"y":392,"width":250,"height":60,"type":"text","text":"Choose tech stack"},
+		{"id":"798675472e148bd0","x":-572,"y":664,"width":250,"height":60,"type":"text","text":"Design database"},
+		{"id":"025bafd0319c7932","x":274,"y":392,"width":250,"height":60,"type":"text","text":"Dockerize application"},
+		{"id":"07ba8d8ee29cf97a","x":274,"y":664,"width":250,"height":60,"type":"text","text":"Test and debug"},
+		{"id":"574331beb6996c32","x":125,"y":897,"width":250,"height":60,"type":"text","text":"Deploy and scale"},
+		{"id":"c21a6320550cb48c","x":-375,"y":897,"width":250,"height":60,"type":"text","text":"Implement the API"},
+		{"id":"71f282648c6a181d","x":-520,"y":-279,"width":329,"height":122,"type":"text","text":"Car rental service that allows customers to book, pay and manage their rental"},
+		{"id":"eaafac3569ab109c","x":-125,"y":-29,"width":250,"height":60,"type":"text","text":"Golang REST API"}
+	],
+	"edges":[
+		{"id":"ffa03a2023dc2fe9","fromNode":"eaafac3569ab109c","fromSide":"bottom","toNode":"98aaed04fdf2e687","toSide":"top","label":"Steps"},
+		{"id":"ddd4f8e1e7048342","fromNode":"98aaed04fdf2e687","fromSide":"bottom","toNode":"f0093887078eed9d","toSide":"right"},
+		{"id":"cd8a487183ea77be","fromNode":"98aaed04fdf2e687","fromSide":"bottom","toNode":"798675472e148bd0","toSide":"right"},
+		{"id":"248ff42c11f109a2","fromNode":"98aaed04fdf2e687","fromSide":"bottom","toNode":"c21a6320550cb48c","toSide":"right"},
+		{"id":"aa3ad352dc721f2e","fromNode":"98aaed04fdf2e687","fromSide":"bottom","toNode":"025bafd0319c7932","toSide":"left"},
+		{"id":"2416f80735a48fb4","fromNode":"98aaed04fdf2e687","fromSide":"left","toNode":"9d1a48ad33aa0fca","toSide":"right"},
+		{"id":"6f50cfe51a0c6431","fromNode":"98aaed04fdf2e687","fromSide":"right","toNode":"78801173a91eb3a5","toSide":"left"},
+		{"id":"ffb209850031fceb","fromNode":"98aaed04fdf2e687","fromSide":"bottom","toNode":"07ba8d8ee29cf97a","toSide":"left"},
+		{"id":"78e503be26e41134","fromNode":"98aaed04fdf2e687","fromSide":"bottom","toNode":"574331beb6996c32","toSide":"left"},
+		{"id":"a50797623695b217","fromNode":"eaafac3569ab109c","fromSide":"left","toNode":"71f282648c6a181d","toSide":"bottom","label":"Theme"}
+	]
+}

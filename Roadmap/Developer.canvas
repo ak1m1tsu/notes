@@ -1,0 +1,11 @@
+{
+	"nodes":[
+		{"id":"f07f0298f14cf282","x":-685,"y":-712,"width":400,"height":369,"type":"file","file":"Study/backend/1-internet/How does the Internet work.md"},
+		{"id":"d953d1fa196b190e","x":-1210,"y":-712,"width":459,"height":283,"type":"file","file":"Study/backend/1-internet/What is HTTP.md"},
+		{"id":"2921f04e72479578","x":-112,"y":-814,"width":170,"height":60,"color":"2","type":"text","text":"Internet"}
+	],
+	"edges":[
+		{"id":"afd3405e6a2b8f99","fromNode":"2921f04e72479578","fromSide":"left","toNode":"f07f0298f14cf282","toSide":"right"},
+		{"id":"73f234cde1528490","fromNode":"2921f04e72479578","fromSide":"left","toNode":"d953d1fa196b190e","toSide":"right"}
+	]
+}

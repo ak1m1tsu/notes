@@ -1,0 +1,98 @@
+Tags: #sql #database
+
+## What's a N+1 query?
+
+Проблема запроса N+1 возникает, когда ваш код выполняет N дополнительных операторов запроса для получения тех же данных, которые могли быть получены при выполнении основного запроса.
+
+Проблема заключается в выполнении множества дополнительных запросов, которые в сумме выполняются уже существенное время, влияющее на быстродействие системы.
+
+### Example
+
+У нас есть два таблицы `post` и `post_comment`, которые связаны отношением *один ко многим*
+
+![[Excalidraw/n+1 problem]]
+
+Вставим в таблицу `post` 4 строки:
+
+```sql
+INSERT INTO post (title, id) 
+VALUES ('High-Performance Java Persistence - Part 1', 1) 
+
+INSERT INTO post (title, id) 
+VALUES ('High-Performance Java Persistence - Part 2', 2) 
+
+INSERT INTO post (title, id) 
+VALUES ('High-Performance Java Persistence - Part 3', 3) 
+
+INSERT INTO post (title, id) 
+VALUES ('High-Performance Java Persistence - Part 4', 4)
+```
+
+А а таблицу `post_comment` 4 дочерние записи:
+
+```sql
+INSERT INTO post_comment (post_id, review, id) 
+VALUES (1, 'Excellent book to understand Java Persistence', 1) 
+
+INSERT INTO post_comment (post_id, review, id) 
+VALUES (2, 'Must-read for Java developers', 2) 
+
+INSERT INTO post_comment (post_id, review, id) 
+VALUES (3, 'Five Stars', 3) 
+
+INSERT INTO post_comment (post_id, review, id) 
+VALUES (4, 'A great reference book', 4)
+```
+
+Если выбрать `post_comments` с помощью следующего **SQL**-запроса:
+
+```sql
+SELECT 
+	pc.id AS id,
+	pc.review AS review,
+	pc.post_id AS postId
+FROM post_comment pc
+```
+
+А позже получить заголовок связанного поста для каждого комментария:
+
+```go
+for _, pc := range postComments {
+	query := "SELECT p.title FROM post p WHERE p.id = %s"
+	if err := db.QueryRow(query, pc.postId).Scan(&title); err != nil {
+		// ......
+	}
+	// .....
+}
+```
+
+То получим проблему N+1, потому что вместо одного SQL-запроса выполнились пять (1+4):
+
+```sql
+SELECT 
+	pc.id AS id,
+	pc.review AS review,
+	pc.post_id AS postId
+FROM post_comment pc
+
+SELECT p.title FROM post p WHERE p.id = 1
+
+SELECT p.title FROM post p WHERE p.id = 2
+
+SELECT p.title FROM post p WHERE p.id = 3
+
+SELECT p.title FROM post p WHERE p.id = 4
+```
+
+В данном случае решить проблему легко, переделав изначальный запрос:
+
+```sql
+SELECT
+	pc.id AS id
+	pc.review AS review
+	p.title as postTitle
+FROM post_comment pc
+JOIN post p on pc.post_id = p.id
+```
+
+В этот раз выполняется только один **SQL**-запрос и возвращаются все данные, которые мы хотим использовать в дальнейшем.
