@@ -1,0 +1,10 @@
+- [[CLI and Basics]]
+- [[Variables and Types]]
+- [[Conditionals]]
+- [[Functions]]
+- [[Addresses and pointers]]
+- [[Structs and maps]]
+- [[Slices and For loops]]
+- [[Go approach]]
+- [[Fmt package]]
+- 
