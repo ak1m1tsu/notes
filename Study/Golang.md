@@ -7,4 +7,6 @@
 - [[Slices and For loops]]
 - [[Go approach]]
 - [[Fmt package]]
+- [[Типы данных]]
+- [[Горутины и каналы]]
 - 

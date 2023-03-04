@@ -1,1 +1,3 @@
-- [[OOP]]
+- [[Programming Paradigms]]
+- [[Design Principles]]
+- 

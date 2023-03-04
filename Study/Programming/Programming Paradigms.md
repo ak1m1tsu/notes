@@ -1,4 +1,12 @@
-## Объектно-ориентированная парадигма
+## Structured Programming
+
+
+
+## Functional Programming
+
+
+
+## Object Oriented Programming
 
 В этой парадигме вся предметная область состоит из наборов объектов.
 
