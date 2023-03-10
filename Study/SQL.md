@@ -1,6 +1,6 @@
 - [[Relational Database]]
 - [[Transactions]]
-- [[Indexes]]
+- [[Индексы]]
 - [[N+1 Problem]]
 - [[Normalization]]
 - 

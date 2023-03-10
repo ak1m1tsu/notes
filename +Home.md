@@ -11,6 +11,7 @@ banner_y: 0.7
 - ![[Golang]]
 - ![[OS]]
 - ![[Programming]]
+- ![[Algorithms]]
 
 # Kanbans
 
